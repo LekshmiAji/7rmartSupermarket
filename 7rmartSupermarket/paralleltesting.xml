@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="paralleltesting" parallel="classes" thread-count="5">
+	<test name="chrometest">
+		<parameter name="browzer" value="chrome"></parameter>
+		<parameter name="Username" value="admin"></parameter>
+		<parameter name="Password" value="admin"></parameter>
+		<classes>
+
+			<class name="testscript.LoginTest">
+				<methods>
+					<include name="verifyUserIsAbleToLogin_ValidCredentials" />
+				</methods>
+			</class>
+			<class name="testscript.AdminUser_Add_Test">
+				<methods>
+					<include name="verifywhetheruserisadded" />
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+</suite>
