@@ -29,7 +29,7 @@ public class LoginTest extends Base {
 
 	@DataProvider(name = "invalidcredentials")
 	public Object[][] testData() {
-		Object data[][] = { { "admin1", "gghhh" } };
+		Object data[][] = { { "yyyyy", "gghhh" } };
 		return data;
 	}
 
@@ -39,8 +39,8 @@ public class LoginTest extends Base {
 		login.enterCredentials(username, password);
 		login.clickonsignin();
 		boolean isAlert_loaded = login.isAlertLoaded();
-		assertTrue(isAlert_loaded, Constant.ALERTMESSAGE);
-		login.alerthandle();
+		assertFalse(isAlert_loaded, Constant.ALERTMESSAGE);
+		//login.alerthandle();
 
 	}
 

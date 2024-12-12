@@ -11,5 +11,7 @@ public class Constant {
 	public static final String USERNOTPRESENT = "User is not present";
 	public static final String TITLEMISMATCH = "Mismatch in title";
 	public static final String CATOGORYSEARCH = "Catogory not found";
+	public static final String CONFIGFILE = System.getProperty("user.dir")
+			+ "\\src\\test\\resources\\config.properties";
 
 }

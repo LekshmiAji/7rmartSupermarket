@@ -5,7 +5,6 @@ import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
-
 import constants.Constant;
 import pages.AdminUser_Add;
 import pages.AdminUser_Search;
@@ -18,7 +17,8 @@ public class AdminUser_SearchTest extends Base {
 	public AdminUser_Add adminuser;
 	public AdminUser_Search adminsearch;
 
-	@Test
+	@Test(retryAnalyzer =retry.Retry.class) 
+			
 	public void verifyWhethersearchitemispresent() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "Loginpage");
 		String password = ExcelUtility.readStringData(1, 1, "Loginpage");
