@@ -59,7 +59,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>crossbrowser.xml</suiteXmlFile>
+						<suiteXmlFile>paralleltesting.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
