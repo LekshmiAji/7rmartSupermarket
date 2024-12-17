@@ -32,7 +32,7 @@ public class AdminUser_Search {
 	public AdminUser_Search searchuser() throws IOException {
 		String user = ExcelUtility.readStringData(1, 0, "Admin_User_add");
 		search_username.sendKeys(user);
-		PageUtility page =new PageUtility();
+		PageUtility page = new PageUtility();
 		page.selectByIndex(search_usertype, 2);
 		searchbutton.click();
 		return this;

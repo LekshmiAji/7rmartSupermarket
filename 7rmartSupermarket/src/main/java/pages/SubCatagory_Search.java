@@ -1,7 +1,5 @@
 package pages;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 import java.lang.invoke.ConstantBootstraps;
 
