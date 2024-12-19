@@ -26,7 +26,7 @@ public class Base {
 	public Properties properties;
 	public FileInputStream fis;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	@Parameters("browzer")
 	public void beforeMethod(String browzer) throws Exception {
 		try {
@@ -48,7 +48,7 @@ public class Base {
 		}
 		driver.get(properties.getProperty("url"));// url from config file
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 	}
 
 	@AfterMethod
@@ -58,6 +58,7 @@ public class Base {
 			Screenshot_Utility sc = new Screenshot_Utility();
 			sc.captureFailureScreenShot(driver, itResult.getName());
 		}
+
 		if (driver != null) {
 			driver.quit();
 		}

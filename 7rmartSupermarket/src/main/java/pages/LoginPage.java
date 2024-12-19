@@ -50,10 +50,6 @@ public class LoginPage {
 		return dashboard.isDisplayed();
 	}
 
-	public void alerthandle() {
-		alertclose.click();
-	}
-
 	public boolean isAlertLoaded() {
 		return alert.isDisplayed();
 	}

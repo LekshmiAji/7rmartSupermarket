@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 import utilities.PageUtility;
 
 public class AdminUser_Add {
@@ -53,9 +54,9 @@ public class AdminUser_Add {
 	}
 
 	public AdminUser_Add add_adminuser() throws IOException {
-
-		String username = ExcelUtility.readStringData(2, 0, "Loginpage");
-		String password = ExcelUtility.readStringData(2, 1, "Loginpage");
+		FakerUtility faker = new FakerUtility();
+		String username = faker.getFakeFirstName();
+		String password = faker.getFakeLastName();
 		username_admin.sendKeys(username);
 		password_admin.sendKeys(password);
 		PageUtility page = new PageUtility();

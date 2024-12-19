@@ -40,11 +40,10 @@ public class LoginTest extends Base {
 		login.clickonsignin();
 		boolean isAlert_loaded = login.isAlertLoaded();
 		assertFalse(isAlert_loaded, Constant.ALERTMESSAGE);
-		//login.alerthandle();
 
 	}
 
-	@Test
+	@Test(groups = { "smoketest" })
 	public void verifyUserIsAbleToLogin_ValidUsernameInvalidPasswaord() throws IOException {
 		String username = ExcelUtility.readStringData(2, 0, "Loginpage");
 		String password = ExcelUtility.readStringData(2, 1, "Loginpage");
@@ -53,7 +52,6 @@ public class LoginTest extends Base {
 		login.clickonsignin();
 		boolean isAlert_loaded = login.isAlertLoaded();
 		assertTrue(isAlert_loaded, Constant.ALERTMESSAGE);
-		login.alerthandle();
 
 	}
 
@@ -68,7 +66,6 @@ public class LoginTest extends Base {
 		boolean isAlert_loaded = login.isAlertLoaded();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		assertTrue(isAlert_loaded, Constant.ALERTMESSAGE);
-		login.alerthandle();
 
 	}
 

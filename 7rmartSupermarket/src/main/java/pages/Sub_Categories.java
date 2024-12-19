@@ -55,10 +55,6 @@ public class Sub_Categories {
 		entersubcategry.sendKeys(catagory);
 		String imagepath = Constant.IMAGEPATH;
 		choosebtn.sendKeys(imagepath);
-		JavascriptExecutor javascript = (JavascriptExecutor) driver;
-		javascript.executeScript("window.scrollTo(0, 9000)");
-
-		Thread.sleep(3000);
 		savebtn.click();
 		return this;
 	}

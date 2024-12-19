@@ -88,7 +88,6 @@ public class ManageProduct {
 		price.sendKeys(price_value);
 		JavascriptExecutor javascript = (JavascriptExecutor) driver;
 		javascript.executeScript("window.scrollBy(0, 7000)");
-		Thread.sleep(500);
 		String stock_value = ExcelUtility.readIntegerData(1, 6, "ManageProduct");
 		stock.sendKeys(stock_value);
 		savebtn.click();

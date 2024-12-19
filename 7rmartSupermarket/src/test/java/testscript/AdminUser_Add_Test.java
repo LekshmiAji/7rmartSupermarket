@@ -11,13 +11,15 @@ import pages.AdminUser_Add;
 import pages.Home;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUser_Add_Test extends Base {
 	public Home homepage;
 	public AdminUser_Add adminuser;
 
-	@Test
+	@Test(groups = { "smoketest" })
 	public void verifywhetheruserisadded() throws IOException {
+
 		String username = ExcelUtility.readStringData(1, 0, "Loginpage");
 		String password = ExcelUtility.readStringData(1, 1, "Loginpage");
 		LoginPage login = new LoginPage(driver);
